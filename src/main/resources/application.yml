@@ -1,0 +1,42 @@
+# ==============================
+# Server configurations
+# ==============================
+server:
+  port: 8080
+
+# ==============================
+# Database configurations
+# ==============================
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ENC(OwweXjwLcqyCrA8n7ztYyIdUnwAGYJ8MyOCQOWqfteI46x26lTZ/Y/Bg3bC3368VbEdOUoep9BcG5BppTDOv5o8J79TdZ4n8YNVmuEBL7RPfHHZPCAa0heTq4trm9WiLFJT+q7vCwjifJkmMPPzwMg==)
+    username: ENC(nOK+URH2mcp9I5rujkWpKwYviaqHHnB3)
+    password: ENC(JbJvMEJZmMFT5IVaZUaoNDyzqqyy6vrjPNCbDOyoegw=)
+    
+  jpa:
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      # create : 기존 테이블 삭제 후 재생성
+      # create-drop : create + 종료시점에 테이블 삭제
+      # update : 변경분만 반영
+      # validate : 엔티티와 테이블 정상 매핑만 확인
+      # none : 사용하지 않음
+      ddl-auto: validate
+
+# ==============================
+# Jasypt configurations
+# ==============================
+jasypt:
+  encryptor:
+    algorithm: PBEWithMD5AndDES
+    key-obtention-iterations: 1000
+    pool-size: 1
+    provider-name: SunJCE
+    salt-generator-classname: org.jasypt.salt.RandomSaltGenerator
+    string-output-type: base64
+    password: ${jasypt.encryptor.password}
