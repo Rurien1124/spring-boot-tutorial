@@ -51,7 +51,7 @@ public class JasyptUtil {
 		
 		JasyptUtil jasyptUtil = new JasyptUtil(key);
 		
-		String pwd = jasyptUtil.encrypt("jdbc:mysql://221.148.164.48:33306/gchyoo_test?characterEncoding=UTF-8&serverTimezone=Asia/Seoul");
+		String pwd = jasyptUtil.encrypt("value to encrypt");
 		
 		System.out.println("encrypted : " + pwd);
 
