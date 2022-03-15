@@ -31,22 +31,22 @@ public class TestController {
 		return String.format("Hello Spring boot! %s", new Date());
 	}
 	
-	@GetMapping("/api/find/all")
+	@GetMapping("/api/all")
 	public List<TestEntity> findAll() {
 		return testService.findAll();
 	}
 	
-	@GetMapping("/api/find/id/{id}")
+	@GetMapping("/api/id/{id}")
 	public List<TestEntity> findById(@PathVariable(required = true) Long id) {
 		return testService.findById(id);
 	}
 
-	@GetMapping("/api/find/value")
+	@GetMapping("/api/value")
 	public List<TestEntity> findByValue(@RequestParam(required = true) String value) {
 		return testService.findByValue(value);
 	}
 
-	@GetMapping("/api/find/valuecontaining")
+	@GetMapping("/api/valuecontaining")
 	public List<TestEntity> findByValueContaining(@RequestParam(required = true) String value) {
 		return testService.findByValueContaining(value);
 	}
