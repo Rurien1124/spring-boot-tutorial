@@ -19,6 +19,7 @@ spring:
     show-sql: true
     properties:
       hibernate:
+        format_sql: true
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
       # create : 기존 테이블 삭제 후 재생성
@@ -27,6 +28,8 @@ spring:
       # validate : 엔티티와 테이블 정상 매핑만 확인
       # none : 사용하지 않음
       ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
 # ==============================
 # Jasypt configurations
@@ -40,3 +43,23 @@ jasypt:
     salt-generator-classname: org.jasypt.salt.RandomSaltGenerator
     string-output-type: base64
     password: ${jasypt.encryptor.password}
+
+# ==============================
+# Logging configurations
+# ==============================
+logging:
+  file:
+    name: logs/spring-boot-tutorial.log
+  level:
+    root: debug
+    org.springframework.web: info
+    com.zaxxer.hikari: warn
+    sun.rmi: warn
+  pattern:
+    console: "[%d{yyyy-MM-dd HH:mm:ss}][%-5level][%-20thread][%-30logger][%method:%line] - %msg%n"
+    file: "[%d{yyyy-MM-dd HH:mm:ss}][%-5level][%-4relative][%thread][%-30logger]{35} - %msg%n"
+  logback:
+    rollingpolicy:
+      max-file-size: 50MB
+      max-history: 7
+      file-name-pattern: "logs/backup/spring-boot-tutorial.log.%d{yyyy-MM-dd}-%i.zip"
