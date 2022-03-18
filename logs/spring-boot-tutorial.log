@@ -22972,3 +22972,88 @@ java.io.EOFException: null
 	at java.lang.Thread.run(Thread.java:750)
 [2022-03-18 17:03:56][DEBUG][26624][http-nio-8080-exec-1][org.apache.coyote.http11.Http11Processor]{35} - Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@7e29372d:org.apache.tomcat.util.net.NioChannel@55bdf81e:java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8080 remote=/0:0:0:0:0:0:0:1:62555]], Status in: [OPEN_READ], State out: [CLOSED]
 [2022-03-18 17:03:56][DEBUG][26624][http-nio-8080-exec-1][org.apache.tomcat.util.threads.LimitLatch]{35} - Counting down[http-nio-8080-exec-1] latch=2
+[2022-03-18 17:03:56][DEBUG][26625][http-nio-8080-exec-1][org.apache.tomcat.util.net.NioEndpoint]{35} - Calling [org.apache.tomcat.util.net.NioEndpoint@790c1c46].closeSocket([org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@7e29372d:org.apache.tomcat.util.net.NioChannel@55bdf81e:java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8080 remote=/0:0:0:0:0:0:0:1:62555]])
+[2022-03-18 17:03:56][DEBUG][26637][http-nio-8080-exec-2][org.apache.tomcat.util.http.Parameters]{35} - Set query string encoding to UTF-8
+[2022-03-18 17:03:56][DEBUG][26639][http-nio-8080-exec-2][org.apache.catalina.authenticator.AuthenticatorBase]{35} - Security checking request DELETE /api/club/3bcd918c-08fc-4fc9-82db-ce4443001ad5
+[2022-03-18 17:03:56][DEBUG][26639][http-nio-8080-exec-2][org.apache.catalina.realm.RealmBase]{35} -   No applicable constraints defined
+[2022-03-18 17:03:56][DEBUG][26642][http-nio-8080-exec-2][org.apache.catalina.authenticator.jaspic.AuthConfigFactoryImpl]{35} - Loading persistent provider registrations from [C:\Users\enemf\AppData\Local\Temp\tomcat.8080.3248717462309695244\conf\jaspic-providers.xml]
+[2022-03-18 17:03:56][DEBUG][26642][http-nio-8080-exec-2][org.apache.catalina.authenticator.AuthenticatorBase]{35} - Not subject to any constraint
+[2022-03-18 17:03:56][INFO ][26644][http-nio-8080-exec-2][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]]{35} - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-03-18 17:03:56][INFO ][26644][http-nio-8080-exec-2][org.springframework.web.servlet.DispatcherServlet]{35} - Initializing Servlet 'dispatcherServlet'
+[2022-03-18 17:03:56][INFO ][26644][http-nio-8080-exec-2][org.springframework.web.servlet.DispatcherServlet]{35} - Completed initialization in 0 ms
+[2022-03-18 17:03:56][DEBUG][26673][http-nio-8080-exec-2][org.springframework.orm.jpa.JpaTransactionManager]{35} - Creating new transaction with name [org.springframework.data.jpa.repository.support.SimpleJpaRepository.deleteById]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+[2022-03-18 17:03:56][DEBUG][26674][http-nio-8080-exec-2][org.springframework.orm.jpa.JpaTransactionManager]{35} - Opened new EntityManager [SessionImpl(608442798<open>)] for JPA transaction
+[2022-03-18 17:03:57][DEBUG][26675][http-nio-8080-exec-2][org.hibernate.engine.transaction.internal.TransactionImpl]{35} - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+[2022-03-18 17:03:57][DEBUG][26675][http-nio-8080-exec-2][org.hibernate.engine.transaction.internal.TransactionImpl]{35} - begin
+[2022-03-18 17:03:57][DEBUG][26687][http-nio-8080-exec-2][org.springframework.orm.jpa.JpaTransactionManager]{35} - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@7237e81c]
+[2022-03-18 17:03:57][DEBUG][26699][http-nio-8080-exec-2][org.hibernate.SQL             ]{35} - 
+    select
+        practiceen0_.ID as id1_1_0_,
+        practiceen0_.FOUNDATION_TIME as foundati2_1_0_,
+        practiceen0_.INTRO as intro3_1_0_,
+        practiceen0_.NAME as name4_1_0_ 
+    from
+        TRAVEL_CLUB practiceen0_ 
+    where
+        practiceen0_.ID=?
+[2022-03-18 17:03:57][DEBUG][26720][http-nio-8080-exec-2][org.hibernate.loader.plan.exec.process.internal.EntityReferenceInitializerImpl]{35} - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+[2022-03-18 17:03:57][DEBUG][26728][http-nio-8080-exec-2][org.hibernate.engine.internal.TwoPhaseLoad]{35} - Resolving attributes for [com.gng.tutorial.practice.model.PracticeEntity#3bcd918c-08fc-4fc9-82db-ce4443001ad5]
+[2022-03-18 17:03:57][DEBUG][26729][http-nio-8080-exec-2][org.hibernate.engine.internal.TwoPhaseLoad]{35} - Processing attribute `foundationTime` : value = 1000000
+[2022-03-18 17:03:57][DEBUG][26729][http-nio-8080-exec-2][org.hibernate.engine.internal.TwoPhaseLoad]{35} - Attribute (`foundationTime`)  - enhanced for lazy-loading? - false
+[2022-03-18 17:03:57][DEBUG][26729][http-nio-8080-exec-2][org.hibernate.engine.internal.TwoPhaseLoad]{35} - Processing attribute `intro` : value = modifyIntro
+[2022-03-18 17:03:57][DEBUG][26729][http-nio-8080-exec-2][org.hibernate.engine.internal.TwoPhaseLoad]{35} - Attribute (`intro`)  - enhanced for lazy-loading? - false
+[2022-03-18 17:03:57][DEBUG][26729][http-nio-8080-exec-2][org.hibernate.engine.internal.TwoPhaseLoad]{35} - Processing attribute `name` : value = JpaTestClub
+[2022-03-18 17:03:57][DEBUG][26729][http-nio-8080-exec-2][org.hibernate.engine.internal.TwoPhaseLoad]{35} - Attribute (`name`)  - enhanced for lazy-loading? - false
+[2022-03-18 17:03:57][DEBUG][26730][http-nio-8080-exec-2][org.hibernate.engine.internal.TwoPhaseLoad]{35} - Done materializing entity [com.gng.tutorial.practice.model.PracticeEntity#3bcd918c-08fc-4fc9-82db-ce4443001ad5]
+[2022-03-18 17:03:57][DEBUG][26731][http-nio-8080-exec-2][org.hibernate.loader.entity.plan.AbstractLoadPlanBasedEntityLoader]{35} - Done entity load : com.gng.tutorial.practice.model.PracticeEntity#3bcd918c-08fc-4fc9-82db-ce4443001ad5
+[2022-03-18 17:03:57][DEBUG][26732][http-nio-8080-exec-2][org.apache.catalina.loader.WebappClassLoaderBase]{35} -     findClass(java.lang.ObjectCustomizer)
+[2022-03-18 17:03:57][DEBUG][26733][http-nio-8080-exec-2][org.apache.catalina.loader.WebappClassLoaderBase]{35} -     --> Returning ClassNotFoundException
+[2022-03-18 17:03:57][DEBUG][26733][http-nio-8080-exec-2][org.apache.catalina.loader.WebappClassLoaderBase]{35} -     findClass(com.gng.tutorial.practice.model.PracticeEntityCustomizer)
+[2022-03-18 17:03:57][DEBUG][26734][http-nio-8080-exec-2][org.apache.catalina.loader.WebappClassLoaderBase]{35} -     --> Returning ClassNotFoundException
+[2022-03-18 17:03:57][DEBUG][26742][http-nio-8080-exec-2][org.springframework.orm.jpa.JpaTransactionManager]{35} - Initiating transaction commit
+[2022-03-18 17:03:57][DEBUG][26742][http-nio-8080-exec-2][org.springframework.orm.jpa.JpaTransactionManager]{35} - Committing JPA transaction on EntityManager [SessionImpl(608442798<open>)]
+[2022-03-18 17:03:57][DEBUG][26742][http-nio-8080-exec-2][org.hibernate.engine.transaction.internal.TransactionImpl]{35} - committing
+[2022-03-18 17:03:57][DEBUG][26743][http-nio-8080-exec-2][org.hibernate.event.internal.AbstractFlushingEventListener]{35} - Processing flush-time cascades
+[2022-03-18 17:03:57][DEBUG][26743][http-nio-8080-exec-2][org.hibernate.event.internal.AbstractFlushingEventListener]{35} - Dirty checking collections
+[2022-03-18 17:03:57][DEBUG][26746][http-nio-8080-exec-2][org.hibernate.event.internal.AbstractFlushingEventListener]{35} - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+[2022-03-18 17:03:57][DEBUG][26746][http-nio-8080-exec-2][org.hibernate.event.internal.AbstractFlushingEventListener]{35} - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+[2022-03-18 17:03:57][DEBUG][26747][http-nio-8080-exec-2][org.hibernate.internal.util.EntityPrinter]{35} - Listing entities:
+[2022-03-18 17:03:57][DEBUG][26747][http-nio-8080-exec-2][org.hibernate.internal.util.EntityPrinter]{35} - com.gng.tutorial.practice.model.PracticeEntity{intro=modifyIntro, foundationTime=1000000, name=JpaTestClub, id=3bcd918c-08fc-4fc9-82db-ce4443001ad5}
+[2022-03-18 17:03:57][DEBUG][26751][http-nio-8080-exec-2][org.hibernate.SQL             ]{35} - 
+    delete 
+    from
+        TRAVEL_CLUB 
+    where
+        ID=?
+[2022-03-18 17:03:57][DEBUG][26799][http-nio-8080-exec-2][org.springframework.orm.jpa.JpaTransactionManager]{35} - Closing JPA EntityManager [SessionImpl(608442798<open>)] after transaction
+[2022-03-18 17:03:57][DEBUG][26800][http-nio-8080-exec-2][org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl]{35} - HHH000420: Closing un-released batch
+[2022-03-18 17:03:57][DEBUG][26816][http-nio-8080-exec-2][org.apache.coyote.http11.Http11InputBuffer]{35} - Before fill(): parsingHeader: [true], parsingRequestLine: [true], parsingRequestLinePhase: [0], parsingRequestLineStart: [0], byteBuffer.position(): [0], byteBuffer.limit(): [0], end: [301]
+[2022-03-18 17:03:57][DEBUG][26816][http-nio-8080-exec-2][org.apache.tomcat.util.net.SocketWrapperBase]{35} - Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@6d56c8dc:org.apache.tomcat.util.net.NioChannel@1c3db3a9:java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8080 remote=/0:0:0:0:0:0:0:1:62556]], Read from buffer: [0]
+[2022-03-18 17:03:57][DEBUG][26816][http-nio-8080-exec-2][org.apache.tomcat.util.net.NioEndpoint]{35} - Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@6d56c8dc:org.apache.tomcat.util.net.NioChannel@1c3db3a9:java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8080 remote=/0:0:0:0:0:0:0:1:62556]], Read direct from socket: [0]
+[2022-03-18 17:03:57][DEBUG][26816][http-nio-8080-exec-2][org.apache.coyote.http11.Http11InputBuffer]{35} - Received []
+[2022-03-18 17:03:57][DEBUG][26816][http-nio-8080-exec-2][org.apache.coyote.http11.Http11Processor]{35} - Socket: [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@6d56c8dc:org.apache.tomcat.util.net.NioChannel@1c3db3a9:java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8080 remote=/0:0:0:0:0:0:0:1:62556]], Status in: [OPEN_READ], State out: [OPEN]
+[2022-03-18 17:03:57][DEBUG][26816][http-nio-8080-exec-2][org.apache.tomcat.util.net.NioEndpoint]{35} - Registered read interest for [org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@6d56c8dc:org.apache.tomcat.util.net.NioChannel@1c3db3a9:java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8080 remote=/0:0:0:0:0:0:0:1:62556]]
+[2022-03-18 17:04:31][DEBUG][61378][Catalina-utility-2][org.apache.catalina.session.ManagerBase]{35} - Start expire sessions StandardManager at 1647590671703 sessioncount 0
+[2022-03-18 17:04:31][DEBUG][61378][Catalina-utility-2][org.apache.catalina.session.ManagerBase]{35} - End expire sessions StandardManager processingTime 0 expired sessions: 0
+[2022-03-18 17:04:57][DEBUG][87305][http-nio-8080-exec-3][org.apache.tomcat.util.threads.LimitLatch]{35} - Counting down[http-nio-8080-exec-3] latch=1
+[2022-03-18 17:04:57][DEBUG][87305][http-nio-8080-exec-3][org.apache.tomcat.util.net.NioEndpoint]{35} - Calling [org.apache.tomcat.util.net.NioEndpoint@790c1c46].closeSocket([org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper@6d56c8dc:org.apache.tomcat.util.net.NioChannel@1c3db3a9:java.nio.channels.SocketChannel[connected local=/0:0:0:0:0:0:0:1:8080 remote=/0:0:0:0:0:0:0:1:62556]])
+[2022-03-18 17:05:31][DEBUG][121425][Catalina-utility-1][org.apache.catalina.session.ManagerBase]{35} - Start expire sessions StandardManager at 1647590731750 sessioncount 0
+[2022-03-18 17:05:31][DEBUG][121425][Catalina-utility-1][org.apache.catalina.session.ManagerBase]{35} - End expire sessions StandardManager processingTime 0 expired sessions: 0
+[2022-03-18 17:06:31][DEBUG][181492][Catalina-utility-1][org.apache.catalina.session.ManagerBase]{35} - Start expire sessions StandardManager at 1647590791817 sessioncount 0
+[2022-03-18 17:06:31][DEBUG][181492][Catalina-utility-1][org.apache.catalina.session.ManagerBase]{35} - End expire sessions StandardManager processingTime 0 expired sessions: 0
+[2022-03-18 17:07:31][DEBUG][241542][Catalina-utility-1][org.apache.catalina.session.ManagerBase]{35} - Start expire sessions StandardManager at 1647590851867 sessioncount 0
+[2022-03-18 17:07:31][DEBUG][241542][Catalina-utility-1][org.apache.catalina.session.ManagerBase]{35} - End expire sessions StandardManager processingTime 0 expired sessions: 0
+[2022-03-18 17:07:34][INFO ][243800][RMI TCP Connection(7)-127.0.0.1][org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin]{35} - Application shutdown requested.
+[2022-03-18 17:07:34][DEBUG][243800][RMI TCP Connection(7)-127.0.0.1][org.springframework.boot.availability.ApplicationAvailabilityBean]{35} - Application availability state ReadinessState changed from ACCEPTING_TRAFFIC to REFUSING_TRAFFIC
+[2022-03-18 17:07:34][DEBUG][243801][RMI TCP Connection(7)-127.0.0.1][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext]{35} - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@1cf6d1be, started on Fri Mar 18 17:03:30 KST 2022
+[2022-03-18 17:07:34][DEBUG][243801][RMI TCP Connection(7)-127.0.0.1][org.springframework.context.support.DefaultLifecycleProcessor]{35} - Stopping beans in phase 2147483647
+[2022-03-18 17:07:34][DEBUG][243802][RMI TCP Connection(7)-127.0.0.1][org.springframework.context.support.DefaultLifecycleProcessor]{35} - Bean 'webServerGracefulShutdown' completed its stop procedure
+[2022-03-18 17:07:34][DEBUG][243802][RMI TCP Connection(7)-127.0.0.1][org.springframework.context.support.DefaultLifecycleProcessor]{35} - Stopping beans in phase 2147483646
+[2022-03-18 17:07:34][DEBUG][243910][RMI TCP Connection(7)-127.0.0.1][org.springframework.context.support.DefaultLifecycleProcessor]{35} - Bean 'webServerStartStop' completed its stop procedure
+[2022-03-18 17:07:34][DEBUG][243911][RMI TCP Connection(7)-127.0.0.1][org.springframework.jmx.export.annotation.AnnotationMBeanExporter]{35} - Unregistering JMX-exposed beans on shutdown
+[2022-03-18 17:07:34][DEBUG][243911][RMI TCP Connection(7)-127.0.0.1][org.springframework.jmx.export.annotation.AnnotationMBeanExporter]{35} - Unregistering JMX-exposed beans
+[2022-03-18 17:07:34][INFO ][243912][RMI TCP Connection(7)-127.0.0.1][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean]{35} - Closing JPA EntityManagerFactory for persistence unit 'default'
+[2022-03-18 17:07:34][DEBUG][243912][RMI TCP Connection(7)-127.0.0.1][org.hibernate.internal.SessionFactoryImpl]{35} - HHH000031: Closing
+[2022-03-18 17:07:34][DEBUG][243912][RMI TCP Connection(7)-127.0.0.1][org.hibernate.type.spi.TypeConfiguration$Scope]{35} - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@7d353462] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@46a795de]
+[2022-03-18 17:07:34][DEBUG][243913][RMI TCP Connection(7)-127.0.0.1][org.hibernate.service.internal.AbstractServiceRegistryImpl]{35} - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+[2022-03-18 17:07:34][DEBUG][243913][RMI TCP Connection(7)-127.0.0.1][org.hibernate.boot.registry.internal.BootstrapServiceRegistryImpl]{35} - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
